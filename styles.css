@@ -6,12 +6,15 @@
  	position: fixed;
 	display: none;
 	z-index:0;
+	width:auto;
+	height: auto;
+	
 	
 }
 
 
 body{
-	
+	height: 100vh;
 }
 div{
 	position: absolute;
@@ -23,14 +26,22 @@ div{
   transform: translate(-50%, -50%);
 }
 h1{
+	width: 500px;
+	margin: auto;
 	font-family: 'roman';
 	font-size: 100px;
 	text-align: center;
 	margin-bottom: 20px;
-	display: block;
-	animation: wiggle .01s infinite;
-	pointer-events: none;
+	position: fixed;
+		pointer-events: none;
+	margin-top: -100px;
+animation: wiggle .01s infinite;
+}
 
+
+#h2{
+	animation: none;
+	
 }
 input{
 	padding: 10px;
@@ -41,9 +52,11 @@ input{
 ul{
 	width: 320px;
 	margin: 0 auto;
-	pointer-events: none;
+	padding-left: 0;
 }
-
+#ui{
+	margin-top: 20%;
+}
 li{
 	display: inline !important;
 	list-style-type: none;
@@ -68,27 +81,31 @@ button{
 	50%{transform:rotate(-3deg);}
 	100%{transform:rotate(3deg);
 		}}
- 
 
- 	#title>span:nth-child(1){
+
+ 	.title>span:nth-child(1){
 		color: #0266C8;
  	}
-	#title>span:nth-child(2){
+	.title>span:nth-child(2){
 		color: #F90101;
 	}
-	#title>span:nth-child(3){
+	.title>span:nth-child(3){
 		color: #F2B50F;
 	}
-	#title>span:nth-child(4){
+	.title>span:nth-child(4){
 		color: #0266C8;
 	}
-	#title>span:nth-child(5){
+	.title>span:nth-child(5){
 		color: #00933B;
 	}
-	#title>span:nth-child(6){
+	.title>span:nth-child(6){
 		color:#F90101;
 	}
-	#title>span:nth-child(7){
+	.title>span:nth-child(7){
 		color:#F2B50F;
+	}
+
+	#title2{
+		display:none;
 	}
 

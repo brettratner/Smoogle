@@ -92,11 +92,10 @@ function fx(o) {
       left:newLeft
     },1000);
   });
+
+
+
 }
 
 
-setTimeout(function(){fx('#title');
 
-$('#myCanvas').style.display = "block";
-
-},5000);

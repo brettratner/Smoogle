@@ -10,14 +10,16 @@
     
 
   </head>
-  <body>
+  <body id = "body">
 
    <!--  <div id="draggable" class="ui-widget-content"> 
      <img src="code-01.png">
      </div> -->
- <canvas id="myCanvas" height="750" width= "1500" ></canvas> 
+ <canvas id="myCanvas"   ></canvas> 
     <div>
-      <h1><span id='title' >
+      <h1 id='h1'>
+
+        <span id="titleOG"class='title' >
         <span>S</span>
         <span>m</span>
         <span>o</span>
@@ -25,21 +27,47 @@
         <span>g</span>
         <span>l</span>
         <span>e</span>
-      </span></h1>
+        </span>
+
+
+             </h1>
+
+          <h1 id= "h2">     <span class='title' id='title2' >
+        <span>S</span>
+        <span>m</span>
+        <span>o</span>
+        <span>o</span>
+        <span>g</span>
+        <span>l</span>
+        <span>e</span>
+        </span></h1>
+
+      <div id="ui">
       <input></input><br/>
 
       <ul>
         <li>
-          <button>Smoogle Search</button>
+          <button id="button">Smoogle Search</button>
         </li>
         <li> 
           <button>I'm really feeling it!</button>
         </li>
       </ul>
     </div>
+    </div>
 
      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="orderCheck.js"></script>
+    <script type="text/javascript" src="orderCheck.js">
+
+
+    </script>
+    <script type="text/javascript">
+    document.getElementById('myCanvas').mouseUp(function(){     
+      arrElem[obj].xpos = that.x;
+      arrElem[obj].ypos = that.y;});
+    
+    </script>
+
       <!--  <script type="text/javascript" src="component6.js"></script>
      <script type="text/javascript" src="component5.js"></script> 
    <script type="text/javascript" src="component4.js"></script>

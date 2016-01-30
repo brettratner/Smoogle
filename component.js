@@ -1,28 +1,28 @@
-var canvas = $('#myCanvas');/*document.getElementById("myCanvas");*/
+var canvas = $('#myCanvas');/*document.getElementById("myCanvas"); */
+var canvas2 = document.getElementById("myCanvas");
 var c = canvas[0].getContext("2d");
 
+canvas2.width  = document.getElementById("body").offsetWidth;
+canvas2.height = document.getElementById("body").offsetHeight;
 
-
-var path = 'code-01.png';
+var path  = 'code-01.png';
 var path2 = 'code-02.png';
 var path3 = 'code-03.png';
 var path4 = 'code-04.png';
 var path5 = 'code-05.png';
 var path6 = 'code-06.png';
-var path7 = 'code-07.png';
-var image = new DragImage(path, 100, 100, 0);
-var image2 = new DragImage(path2, 200, 100, 1);
-var image3 = new DragImage(path3, 300, 100, 2);
-var image4 = new DragImage(path4, 400, 100, 3);
-var image5 = new DragImage(path5, 500, 100, 4);
-var image6 = new DragImage(path6, 600, 100, 5);
-var image7 = new DragImage(path7, 700, 100, 6);
+var image  = new DragImage(path,  (Math.random() * (canvas2.width - 60)+20), (Math.random() * (canvas2.height - 40)+20), 0);
+var image2 = new DragImage(path2, (Math.random() * (canvas2.width - 110)+20), (Math.random() * (canvas2.height - 40)+20), 1);
+var image3 = new DragImage(path3, (Math.random() * (canvas2.width - 110)+20), (Math.random() * (canvas2.height - 40)+20), 2);
+var image4 = new DragImage(path4, (Math.random() * (canvas2.width - 60)+20), (Math.random() * (canvas2.height - 40)+20), 3);
+var image5 = new DragImage(path5, (Math.random() * (canvas2.width - 325)+20), (Math.random() * (canvas2.height - 40)+20), 4);
+var image6 = new DragImage(path6, (Math.random() * (canvas2.width - 80)+20), (Math.random() * (canvas2.height - 40)+20), 5);
 //var image2 = new DragImage(path2, 200, 100);
 
 var loop = setInterval(function() {
 
     c.fillStyle = "white";
-    c.fillRect(0, 0, 1500, 750);
+    c.fillRect(0, 0, canvas2.width, canvas2.height);
 
     image.update();
     image2.update();
@@ -30,7 +30,6 @@ var loop = setInterval(function() {
     image4.update();
     image5.update();
     image6.update();
-     image7.update();
 
 }, 30);
 
@@ -54,7 +53,7 @@ function DragImage(src, x, y, obj) {
     this.x = x;
     this.y = y;
     var img = new Image();
-
+   
     img.src = src;
 
     this.update = function() {
@@ -83,9 +82,7 @@ function DragImage(src, x, y, obj) {
        
 
          
-      if(checkOrder(arrElem)){
-        alert("YOU WIN BITCH");
-      }
+   
     
 
         c.drawImage(img, that.x, that.y);
@@ -95,3 +92,32 @@ function DragImage(src, x, y, obj) {
 
 
 
+setTimeout(function(){
+    fx('#titleOG');
+    setTimeout(function(){
+        document.getElementById('h1').style.display = "none";
+
+
+        $('#myCanvas').fadeIn(1000);
+    }, 500);
+},5000);
+
+
+$("#button").click(function(){
+    console.log("hi");
+       if(checkOrder(arrElem)){
+        document.getElementById("myCanvas").style.display = "none";
+        // document.getElementById("h1").style.display = "block";
+       // document.getElementById('title2').style.display = "block";
+       $("#title2").animate(function(){
+        'fontsize' : '120px'
+
+
+       } 1000, function(){
+            'fontsize' : '100px'
+
+       });
+
+      }
+
+});
