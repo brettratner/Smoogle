@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'roman';
+    src: url('Fairview_Regular.otf');
+}
+ #myCanvas{
+ 	position: fixed;
+	display: none;
+	z-index:0;
+	
+}
+
+
+body{
+	
+}
+div{
+	position: absolute;
+	width: 500px;
+	display: block;
+	position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1{
+	font-family: 'roman';
+	font-size: 100px;
+	text-align: center;
+	margin-bottom: 20px;
+	display: block;
+	animation: wiggle .01s infinite;
+	pointer-events: none;
+
+}
+input{
+	padding: 10px;
+	width: 500px;
+	margin-bottom: 30px;
+	pointer-events: none;
+}
+ul{
+	width: 320px;
+	margin: 0 auto;
+	pointer-events: none;
+}
+
+li{
+	display: inline !important;
+	list-style-type: none;
+}
+button{
+	padding: 5px;
+	width: 150px;
+}
+@-ms-keyframes wiggle
+{0%{-ms-transform:rotate(3deg);}
+50%{-ms-transform:rotate(-3deg);}
+100%{-ms-transform:rotate(3deg);}}
+
+@-moz-keyframes wiggle{0%{-moz-transform:rotate(3deg);}50%{-moz-transform:rotate(-3deg);}100%{-moz-transform:rotate(3deg);}}
+
+@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(3deg);}50%{-webkit-transform:rotate(-3deg);}100%{-webkit-transform:rotate(3deg);}}
+
+@keyframes wiggle{
+	0%{transform:rotate(3deg);
+		
+	}
+	50%{transform:rotate(-3deg);}
+	100%{transform:rotate(3deg);
+		}}
+ 
+
+ 	#title>span:nth-child(1){
+		color: #0266C8;
+ 	}
+	#title>span:nth-child(2){
+		color: #F90101;
+	}
+	#title>span:nth-child(3){
+		color: #F2B50F;
+	}
+	#title>span:nth-child(4){
+		color: #0266C8;
+	}
+	#title>span:nth-child(5){
+		color: #00933B;
+	}
+	#title>span:nth-child(6){
+		color:#F90101;
+	}
+	#title>span:nth-child(7){
+		color:#F2B50F;
+	}
+
