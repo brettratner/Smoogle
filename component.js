@@ -11,13 +11,60 @@ var path3 = 'code-03.png';
 var path4 = 'code-04.png';
 var path5 = 'code-05.png';
 var path6 = 'code-06.png';
-var image  = new DragImage(path,  (Math.random() * (canvas2.width - 60)+20), (Math.random() * (canvas2.height - 40)+20), 0);
-var image2 = new DragImage(path2, (Math.random() * (canvas2.width - 110)+20), (Math.random() * (canvas2.height - 40)+20), 1);
-var image3 = new DragImage(path3, (Math.random() * (canvas2.width - 110)+20), (Math.random() * (canvas2.height - 40)+20), 2);
-var image4 = new DragImage(path4, (Math.random() * (canvas2.width - 60)+20), (Math.random() * (canvas2.height - 40)+20), 3);
-var image5 = new DragImage(path5, (Math.random() * (canvas2.width - 325)+20), (Math.random() * (canvas2.height - 40)+20), 4);
-var image6 = new DragImage(path6, (Math.random() * (canvas2.width - 80)+20), (Math.random() * (canvas2.height - 40)+20), 5);
+var temp;
+
+temp = RandomPosition();
+console.log("x:" + temp[0] + " Y: "+ temp[1]);
+var image  = new DragImage(path,  temp[0], temp[1], 0);
+
+temp = RandomPosition();
+var image2 = new DragImage(path2, temp[0], temp[1], 1);
+
+temp = RandomPosition();
+var image3 = new DragImage(path3, temp[0], temp[1], 2);
+
+temp = RandomPosition();
+var image4 = new DragImage(path4, temp[0], temp[1], 3);
+
+temp = RandomPosition();
+var image5 = new DragImage(path5, temp[0], temp[1], 4);
+
+temp = RandomPosition();
+var image6 = new DragImage(path6, temp[0], temp[1],5);
 //var image2 = new DragImage(path2, 200, 100);
+
+
+// var image  = new DragImage(path,  (Math.random() * (canvas2.width - 60)+20), (Math.random() * (canvas2.height - 40)+20), 0);
+// var image2 = new DragImage(path2, (Math.random() * (canvas2.width - 110)+20), (Math.random() * (canvas2.height - 40)+20), 1);
+// var image3 = new DragImage(path3, (Math.random() * (canvas2.width - 110)+20), (Math.random() * (canvas2.height - 40)+20), 2);
+// var image4 = new DragImage(path4, (Math.random() * (canvas2.width - 60)+20), (Math.random() * (canvas2.height - 40)+20), 3);
+// var image5 = new DragImage(path5, (Math.random() * (canvas2.width - 325)+20), (Math.random() * (canvas2.height - 40)+20), 4);
+// var image6 = new DragImage(path6, (Math.random() * (canvas2.width - 80)+20), (Math.random() * (canvas2.height - 40)+20), 5);
+// //var image2 = new DragImage(path2, 200, 100);
+
+    var center;
+    function RandomPosition(){
+var x;
+var y;
+var isValid = false;
+
+
+    while(!isValid){
+
+        x =(Math.random() * (canvas2.width - 300)+20);        
+        y = (Math.random() * (canvas2.height - 60)+20);
+
+
+        if(y > canvas2.height/4 + 100 && y < canvas2.height/4 + 99 + 100 &&  x > canvas2.width/2 - 160 - 50 && x < canvas2.width/2 + 160 + 50 ){
+
+
+        }else{
+            isValid = true;
+        }
+    }
+    return [x,y]; 
+
+    }
 
 var loop = setInterval(function() {
 
@@ -105,18 +152,22 @@ setTimeout(function(){
 
 $("#button").click(function(){
     console.log("hi");
+    console.log(checkLogoArea(arrElem));
        if(checkOrder(arrElem)){
         document.getElementById("myCanvas").style.display = "none";
         // document.getElementById("h1").style.display = "block";
-       // document.getElementById('title2').style.display = "block";
-       $("#title2").animate(function(){
-        'fontsize' : '120px'
+        document.getElementById('title2').style.display = "block";
+        $("#title2").stop().animate({
+            fontSize: '120px'
+        });
+       // $("#title2").animate(function(){
+       //  'fontsize' : '120px'
 
 
-       } 1000, function(){
-            'fontsize' : '100px'
+       // } 1000, function(){
+       //      'fontsize' : '100px'
 
-       });
+       // });
 
       }
 

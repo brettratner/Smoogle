@@ -15,6 +15,7 @@
 
 body{
 	height: 100vh;
+	max-height: 100vh;
 }
 div{
 	position: absolute;
@@ -41,7 +42,8 @@ animation: wiggle .01s infinite;
 
 #h2{
 	animation: none;
-	
+
+
 }
 input{
 	padding: 10px;
@@ -107,5 +109,6 @@ button{
 
 	#title2{
 		display:none;
+		font-size: 0;
 	}
 

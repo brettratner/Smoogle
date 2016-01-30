@@ -34,8 +34,9 @@ var arrElem = [
 function checkLogoArea(arrayOfElements){
 	var inArea = false;
 	for(var i = 0; i<arrayOfElements.length-1; i++){
-			if(arrayOfElements[i].xpos < ((canvas.width)/2 + 250) && arrayOfElements[i].xpos > ((canvas.width)/2-250) 
-				){
+		console.log("Index : " + i + " - " + arrayOfElements[i].xpos +" "+ arrayOfElements[i].xpos);
+			if(arrayOfElements[i].xpos < (canvas.width)/2 + 800 && arrayOfElements[i].xpos > (canvas.width)/2-800 && arrayOfElements[i].ypos < (canvas.height)/2 + 500 && arrayOfElements[i].ypos > 0 ) 
+			{
 
 
 			}else{
