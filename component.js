@@ -5,6 +5,16 @@ var c = canvas[0].getContext("2d");
 canvas2.width  = document.getElementById("body").offsetWidth;
 canvas2.height = document.getElementById("body").offsetHeight;
 
+ var winSound = new Audio('yaaaa.wav');
+ var loseSound = new Audio("wahhwahh.wav");
+  var pop = new Audio('pop.wav');
+ var bloop = new Audio('blood.wav');
+var explosion = new Audio('explosion.wav');
+var rumble = new Audio('rumble.wav');
+var fart = new Audio("fart.wav");
+var buildup = new Audio("buildup.wav");
+var bgSound = new Audio("bgSound.wav");
+
 var path  = 'code-01.png';
 var path2 = 'code-02.png';
 var path3 = 'code-03.png';
@@ -89,12 +99,27 @@ canvas.mousemove(function(e) {
  
 $(document).mousedown(function(){
     mousePressed = true;
+    pop.play();
+        
 }).mouseup(function(){
     mousePressed = false;
+    pop.play();
+     
 });
 
 function DragImage(src, x, y, obj) {
-    var that = this;
+ var that = this;
+/* canvas.click(function(that){
+    console.log(this.drag);
+    console.log(arrElem[0].drag);
+this.drag =1;
+console.log(this.drag);
+
+}).mouseup(function() {
+    this.drag = 0;
+});*/
+
+   
     var startX = 0, startY = 0;
     var drag = false;
     this.x = x;
@@ -104,7 +129,9 @@ function DragImage(src, x, y, obj) {
     img.src = src;
 
     this.update = function() {
+        
         if (mousePressed){
+
             var left = that.x;
             var right = that.x + img.width;
             var top = that.y;
@@ -120,11 +147,14 @@ function DragImage(src, x, y, obj) {
            drag = false;
         }
         if (drag){
-            that.x = mouseX - startX;
-            that.y = mouseY - startY;
-            arrElem[obj].xpos = that.x;
-            arrElem[obj].ypos = that.y;
+          
+                
 
+                that.x = mouseX - startX;
+                that.y = mouseY - startY;
+                arrElem[obj].xpos = that.x;
+                arrElem[obj].ypos = that.y;
+            
         }
        
 
@@ -136,39 +166,54 @@ function DragImage(src, x, y, obj) {
      
     }
 }
-
-
+$(document).ready(function(){
+   
+  buildup.loop = true;
+buildup.play();
+});
 
 setTimeout(function(){
+    buildup.pause();
+    fart.play();
+
     fx('#titleOG');
+
     setTimeout(function(){
         document.getElementById('h1').style.display = "none";
 
 
-        $('#myCanvas').fadeIn(1000);
+        $('#myCanvas').fadeIn(1000); 
+        bgSound.loop = true;
+        setTimeout(function(){
+            bgSound.play();
+        } , 1000);
+        
     }, 500);
 },5000);
+
 
 
 $("#button").click(function(){
     console.log("hi");
     console.log(checkLogoArea(arrElem));
        if(checkOrder(arrElem)){
+        
+        bgSound.pause();
+        winSound.play();
         document.getElementById("myCanvas").style.display = "none";
-        // document.getElementById("h1").style.display = "block";
         document.getElementById('title2').style.display = "block";
-        $("#title2").stop().animate({
-            fontSize: '120px'
+        $("#title2").stop().delay(500).animate({
+            fontSize: '150px'
+
+        } ,500, function(){
+                $("#title2").stop().animate({
+            fontSize: '100px'
         });
-       // $("#title2").animate(function(){
-       //  'fontsize' : '120px'
 
-
-       // } 1000, function(){
-       //      'fontsize' : '100px'
-
-       // });
-
+        });
+    
+      }else{
+        loseSound.play();
       }
 
 });

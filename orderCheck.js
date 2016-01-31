@@ -4,28 +4,34 @@ var logo = document.getElementById("logo");
 var arrElem = [
 	{
 		xpos : 0,
-		ypos : 0
+		ypos : 0,
+		drag: 0
 	},
 	{
 		xpos : 0,
-		ypos: 0
+		ypos: 0,
+		drag: 0
 
 	},
 	{
 		xpos : 0,
-		ypos : 0
+		ypos : 0,
+		drag : 0
 	},
 	{
 		xpos : 0,
-		ypos : 0
+		ypos : 0,
+		drag : 0
 	},
 	{
 		xpos: 0,
-		ypos: 0
+		ypos: 0,
+		drag: 0
 	},
 	{
 		xpos : 0,
-		ypos : 0
+		ypos : 0,
+		drag: 0
 	}
 ];
 

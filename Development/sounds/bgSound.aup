@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="bgSound_data" version="1.3.0" audacityversion="2.1.2" sel0="0.0000000000" sel1="13.8906875000" vpos="0" h="0.0000000000" zoom="50.4654255319" rate="16000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="bgSound" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="16000" gain="1.0" pan="0.0">
+		<waveclip offset="0.33687500">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="222251">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000d97.au" len="222251" min="-0.528869" max="0.533129" rms="0.127859"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

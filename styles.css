@@ -8,14 +8,30 @@
 	z-index:0;
 	width:auto;
 	height: auto;
-	
+	top:0;
+
 	
 }
-
-
+#loader{
+	position: fixed;
+	display: block;
+	top:0;
+	width:100vw;
+	height:100vh;
+	background: rgba(0,0,0,.8);
+	z-index: 10;
+	
+}
+#repairMan{
+	z-index: 10;
+	position: fixed;
+	margin-top: -50%;
+	margin-left: 130%;
+}
 body{
 	height: 100vh;
 	max-height: 100vh;
+	margin:0;
 }
 div{
 	position: absolute;
@@ -50,6 +66,7 @@ input{
 	width: 500px;
 	margin-bottom: 30px;
 	pointer-events: none;
+	z-index: 0;
 }
 ul{
 	width: 320px;
@@ -58,6 +75,7 @@ ul{
 }
 #ui{
 	margin-top: 20%;
+	z-index: 0;
 }
 li{
 	display: inline !important;
@@ -110,5 +128,6 @@ button{
 	#title2{
 		display:none;
 		font-size: 0;
+		z-index: 9;
 	}
 
