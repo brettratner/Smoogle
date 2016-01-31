@@ -12,6 +12,21 @@
 
 	
 }
+
+#story {
+    position: fixed;
+    width: 500px;
+    display: block;
+    margin-left:84%;
+    left: 0;
+    top: 29%;
+	height: 55%;
+	 border-style: solid;
+    border-width: 5px;
+    border-color: red;
+}
+
+
 #loader{
 	position: fixed;
 	display: block;
@@ -23,10 +38,17 @@
 	
 }
 #repairMan{
-	z-index: 10;
+    z-index: 10;
+    position: fixed;
+    margin-top: 12%;
+    margin-left: 3%;
+}
+#next{
+	top: 87%;
 	position: fixed;
-	margin-top: -50%;
-	margin-left: 130%;
+	left: 36%;
+}
+
 }
 body{
 	height: 100vh;
