@@ -1,0 +1,1 @@
+Our Game is hosted on the web so all you need to do is download the code and the rest of the assets on your computer, then open up the index.html file the browser of your choosing. 

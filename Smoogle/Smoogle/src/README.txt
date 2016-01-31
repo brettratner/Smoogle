@@ -1,0 +1,2 @@
+
+To make any changes to our code you can open the files: index.html, component.js, cutscenes.js, orderCheck.js, and style.css in your favorite text editor and then you may begin to use your skills in html, javascript and css, to make all the alterations. 
