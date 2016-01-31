@@ -26,38 +26,41 @@ var temp;
 temp = RandomPosition();
 console.log("x:" + temp[0] + " Y: "+ temp[1]);
 var image  = new DragImage(path,  temp[0], temp[1], 0);
+arrElem[0].xpos = temp[0];
+arrElem[0].ypos = temp[1];
+
 
 temp = RandomPosition();
 var image2 = new DragImage(path2, temp[0], temp[1], 1);
+arrElem[1].xpos = temp[0];
+arrElem[1].ypos = temp[1];
 
 temp = RandomPosition();
 var image3 = new DragImage(path3, temp[0], temp[1], 2);
+arrElem[2].xpos = temp[0];
+arrElem[2].ypos = temp[1];
 
 temp = RandomPosition();
 var image4 = new DragImage(path4, temp[0], temp[1], 3);
+arrElem[3].xpos = temp[0];
+arrElem[3].ypos = temp[1];
 
 temp = RandomPosition();
 var image5 = new DragImage(path5, temp[0], temp[1], 4);
+arrElem[4].xpos = temp[0];
+arrElem[4].ypos = temp[1];
 
 temp = RandomPosition();
 var image6 = new DragImage(path6, temp[0], temp[1],5);
-//var image2 = new DragImage(path2, 200, 100);
+arrElem[5].xpos = temp[0];
+arrElem[5].ypos = temp[1];
 
-
-// var image  = new DragImage(path,  (Math.random() * (canvas2.width - 60)+20), (Math.random() * (canvas2.height - 40)+20), 0);
-// var image2 = new DragImage(path2, (Math.random() * (canvas2.width - 110)+20), (Math.random() * (canvas2.height - 40)+20), 1);
-// var image3 = new DragImage(path3, (Math.random() * (canvas2.width - 110)+20), (Math.random() * (canvas2.height - 40)+20), 2);
-// var image4 = new DragImage(path4, (Math.random() * (canvas2.width - 60)+20), (Math.random() * (canvas2.height - 40)+20), 3);
-// var image5 = new DragImage(path5, (Math.random() * (canvas2.width - 325)+20), (Math.random() * (canvas2.height - 40)+20), 4);
-// var image6 = new DragImage(path6, (Math.random() * (canvas2.width - 80)+20), (Math.random() * (canvas2.height - 40)+20), 5);
-// //var image2 = new DragImage(path2, 200, 100);
-
-    var center;
-    function RandomPosition(){
-var x;
-var y;
-var isValid = false;
-
+var center;
+function RandomPosition(){
+    var x;
+    var y;
+    var isValid = false;
+    console.log("hit check");
 
     while(!isValid){
 
@@ -65,7 +68,7 @@ var isValid = false;
         y = (Math.random() * (canvas2.height - 60)+20);
 
 
-        if(y > canvas2.height/4 + 100 && y < canvas2.height/4 + 99 + 100 &&  x > canvas2.width/2 - 160 - 50 && x < canvas2.width/2 + 160 + 50 ){
+        if(y > canvas2.height/4 + 500 && y < canvas2.height/4 + 99 + 500 &&  x > canvas2.width/2 - 160 - 500 && x < canvas2.width/2 + 160 + 500 ){
 
 
         }else{
@@ -169,32 +172,15 @@ console.log(this.drag);
 $(document).ready(function(){
    
   buildup.loop = true;
-buildup.play();
+
 });
 
-setTimeout(function(){
-    buildup.pause();
-    fart.play();
 
-    fx('#titleOG');
-
-    setTimeout(function(){
-        document.getElementById('h1').style.display = "none";
-
-
-        $('#myCanvas').fadeIn(1000); 
-        bgSound.loop = true;
-        setTimeout(function(){
-            bgSound.play();
-        } , 1000);
-        
-    }, 500);
-},5000);
 
 
 
 $("#button").click(function(){
-    console.log("hi");
+    
     console.log(checkLogoArea(arrElem));
        if(checkOrder(arrElem)){
         
@@ -217,3 +203,10 @@ $("#button").click(function(){
       }
 
 });
+
+
+
+
+
+
+

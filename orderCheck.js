@@ -63,14 +63,6 @@ function checkOrder(arrayOfElements){
 			return true;
 		}
 		return false;
-	/*
-	100
-	182
-	206
-	100
-	593
-	121
-*/
 
 }
 

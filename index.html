@@ -9,9 +9,33 @@
 
   </head>
   <body id = "body">
-  <div id="story">
+    <div id="story">
+    <video id="video"width="500" height="281" autoplay controls>
+    <source src="intro.mp4" type="video/mp4">  
+    </video> 
+    <div id="introText">
     <img id="repairMan" src="repairman.png" width="100" height="175">
-      <button id="next"> Next </button>
+
+    <p id="d1">Hey there junior!</p>
+
+    <p id="d2">You've been chosen to help with a super top secret mission. Every night at Midnight, I recieve many Internet repair requests.</p>
+
+
+    <p id="d3">Its my job to fix the internet before anyone notices. Today I have a special mission I need your help with.<p/>
+
+    <p id="d4">The popular Smoogle search engine has been acting up. The logo seems to have gone bonkers!</p>
+
+    
+    <p id="d5">
+      When the logo image becomes unstable, and falls into its pieces, it will be your job to assemble them in the correct order to fix the code. Here is an example of an image tag :</br> <b>&#60; img src="image_name" /&#62;</b>.
+    </p>
+    <p id="d6">
+     When you believe you have ordered them correctly, press "check answer". If you need any help, click the "hints" button.
+    </p>
+
+
+  <button id="next">Next</button>
+</div>
   </div>
  
   
@@ -35,16 +59,34 @@
 
       <ul>
         <li>
-          <button id="button">Smoogle Search</button>
+          <button id="button">Check Answer</button>
         </li>
         <li> 
-          <button>I'm really feeling it!</button>
+          <button id="hint">Hint</button>
         </li>
       </ul>
     </div>
     </div>
-
-     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    
+    <div id="helpBox">
+ <img id="repairMan2" src="repairman2.png" width="200" height="325">
+  <p id = "hint1">
+  &#60;  This symbol is the start of all things on the web. This always comes first!<br/>
+  </p>
+  <p id = "hint2">
+      For images and logos, you want "img" after the opening "&#60;".
+      <br/>
+      </p>
+<p id = "hint3">
+      When making your image, you will need to tell the internet where to find your image. <br/>Use "scr =" followed by your image name to let it know.
+      <br/>
+      </p>
+<p id = "hint4">
+      Close your code with a /&#62;! <br/>
+ </p>
+  </div>
+     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>  
+    
     <script type="text/javascript" src="orderCheck.js">
 
 
@@ -53,7 +95,7 @@
 
 
 <script type="text/javascript" src="component.js"></script>
-
+ <script type="text/javascript" src="cutscenes.js"></script>
 
  </body>
 </html>

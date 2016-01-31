@@ -2,6 +2,19 @@
     font-family: 'roman';
     src: url('Fairview_Regular.otf');
 }
+
+@font-face {
+    font-family: 'asap';
+    src: url('asap/asap-regular-webfont.eot');
+    src: url('asap/asap-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('asap/asap-regular-webfont.woff2') format('woff2'),
+         url('asap/asap-regular-webfont.woff') format('woff'),
+         url('asap/asap-regular-webfont.ttf') format('truetype'),
+         url('asap/asap-regular-webfont.svg#asapregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
  #myCanvas{
  	position: fixed;
 	display: none;
@@ -12,21 +25,6 @@
 
 	
 }
-
-#story {
-    position: fixed;
-    width: 500px;
-    display: block;
-    margin-left:84%;
-    left: 0;
-    top: 29%;
-	height: 55%;
-	 border-style: solid;
-    border-width: 5px;
-    border-color: red;
-}
-
-
 #loader{
 	position: fixed;
 	display: block;
@@ -37,18 +35,19 @@
 	z-index: 10;
 	
 }
-#repairMan{
-    z-index: 10;
-    position: fixed;
-    margin-top: 12%;
-    margin-left: 3%;
-}
-#next{
-	top: 87%;
+p{
+	display: none;
+	left: 30%;
 	position: fixed;
-	left: 36%;
+	top: 30%;
+	padding-right: 30px;
 }
 
+#repairMan{
+	z-index: 10;
+	position: fixed;
+	margin-top: -50%;
+	margin-left: 130%;
 }
 body{
 	height: 100vh;
@@ -153,3 +152,99 @@ button{
 		z-index: 9;
 	}
 
+
+
+
+
+
+#story {
+    position: fixed;
+    width: 500px;
+    display: block;
+    margin-left:84%;
+    left: 0;
+    top: 155px;
+	height: 281px;
+	z-index: 12;
+	border-style: solid;
+    border-width: 7px;
+    border-color: #DA5454;
+    border-radius: 4px
+}
+
+#repairMan{
+    z-index: 10;
+    position: fixed;
+    margin-top: 12%;
+    margin-left: 3%;
+}
+#next{
+	top: 87%;
+	position: fixed;
+	left: 36%;
+	border-radius: 3px;
+	color: white;
+	background: #39B94E;
+
+}
+
+#introText{
+	position: fixed;
+    width: 100%;
+    display: block;
+    
+    left: 265px;
+    top: 140px;
+	height: 100%;
+	z-index: 12;
+	font-family: "asap";
+
+
+}
+
+
+#helpBox {
+  position: fixed;
+
+height: 180px;
+top: 90%;
+width: 520px;
+
+margin: auto;
+display: none;
+}
+
+#repairMan2{
+    z-index: 10;
+    position: fixed;
+  	top: -65px;
+margin-left: -32px;
+
+}
+#hint1{
+position: fixed;
+left:180px;
+top:55px;
+display: none;
+}
+
+#hint2{
+position: fixed;
+left:180px;
+top:55px;
+display: none;
+}
+
+#hint3{
+position: fixed;
+left:180px;
+top:55px;
+display: none;
+}
+
+#hint4{
+position: fixed;
+left:180px;
+top:55px;
+display: none;
+}

@@ -1,15 +1,27 @@
 <?xml version="1.0" standalone="no" ?>
 <!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
-<project xmlns="http://audacity.sourceforge.net/xml/" projname="bgSound_data" version="1.3.0" audacityversion="2.1.2" sel0="0.0000000000" sel1="13.8906875000" vpos="0" h="0.0000000000" zoom="50.4654255319" rate="16000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="bgSound_data" version="1.3.0" audacityversion="2.1.2" sel0="0.3368750000" sel1="14.2275625000" vpos="0" h="0.0000000000" zoom="50.4654255319" rate="16000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
 	<tags/>
 	<wavetrack name="bgSound" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="16000" gain="1.0" pan="0.0">
 		<waveclip offset="0.33687500">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="222251">
 				<waveblock start="0">
-					<simpleblockfile filename="e0000d97.au" len="222251" min="-0.528869" max="0.533129" rms="0.127859"/>
+					<simpleblockfile filename="e0000e58.au" len="222251" min="-0.167728" max="0.168715" rms="0.039997"/>
 				</waveblock>
 			</sequence>
-			<envelope numpoints="0"/>
+			<envelope numpoints="1">
+				<controlpoint t="13.890625000000" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+		<waveclip offset="14.22756250">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="53">
+				<waveblock start="0">
+					<simpleblockfile filename="e00008a5.au" len="53" min="0.0" max="0.0" rms="0.0"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="1">
+				<controlpoint t="0.000000000000" val="1.000000000000"/>
+			</envelope>
 		</waveclip>
 	</wavetrack>
 </project>
